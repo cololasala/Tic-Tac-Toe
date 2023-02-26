@@ -7,18 +7,6 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-p {
-  text-align: center;
-}
-
-.x {
-  color: rgb(255, 70, 37);
-}
-
-.o {
-  color: rgb(44, 135, 255);
-}
-
 footer {
   text-align: center;
   margin-top: auto;

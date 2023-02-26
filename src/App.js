@@ -1,13 +1,13 @@
 import { Board } from "./components/Board";
 import { useState } from "react";
 import "./App.css";
+import { ScoreBoard } from "./components/ScoreBoard";
 
 function App() {
   const [board, setBoard] = useState(Array(9).fill(""));
   const [isPlayerX, setIsPlayerX] = useState(true);
   const [winner, setWinner] = useState(null);
-  const [countX, setCountX] = useState(0);
-  const [countO, setCountO] = useState(0);
+  const [scores, setScores] = useState({ scoreX: 0, scoreO: 0 });
 
   const WIN_CONDITIONS = [
     [0, 1, 2],
@@ -51,9 +51,9 @@ function App() {
 
   const incrementCountWinner = (winner) => {
     if (winner === "X") {
-      setCountX(countX + 1);
+      setScores({ ...scores, scoreX: scores.scoreX + 1 });
     } else {
-      setCountO(countO + 1);
+      setScores({ ...scores, scoreO: scores.scoreO + 1 });
     }
   };
 
@@ -69,8 +69,7 @@ function App() {
 
   return (
     <>
-      <p className="x"><b>Contador ganardor X: {countX}</b></p>
-      <p className="o"><b>Contador ganardor O: {countO}</b></p>
+      <ScoreBoard scores={scores}/>
       <Board board={board} onClick={setValue} />
       {checkEndGame() && (
         <div className="end-game">

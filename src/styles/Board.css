@@ -1,0 +1,5 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 6rem); /* digo que haga 3 columnas de 6rem */
+  justify-content: center;
+}

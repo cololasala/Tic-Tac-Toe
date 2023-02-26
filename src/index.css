@@ -1,4 +1,9 @@
 body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -7,9 +12,14 @@ p {
 }
 
 .x {
-  color: rgb(255, 70, 37)
-} 
+  color: rgb(255, 70, 37);
+}
 
 .o {
-  color:rgb(44, 135, 255)
+  color: rgb(44, 135, 255);
+}
+
+footer {
+  text-align: center;
+  margin-top: auto;
 }
